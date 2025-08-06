@@ -1,8 +1,8 @@
-# Burton Cummings Theatre (WordPress 6.x)
+# Manitoba Moose (WordPress 6.x)
 
 **Site Environment**
 
-Hosting for the Burton Cummings Theatre website is provided by Amazon Elastic Beanstalk, CloudFront and RDS,
+Hosting for the Manitoba Moose website is provided by Amazon Elastic Beanstalk, CloudFront and RDS,
 and is set up to automatically scale to meet system demand.
 
 Basic site environment:
@@ -13,30 +13,30 @@ Basic site environment:
 
 ## Production Environment
 
-www.burtoncummingstheatre.ca runs on a hardware configuration of 1x - 4x AWS t3a.small instances (see
+www.moosehockey.com runs on a hardware configuration of 1x - 4x AWS t3a.small instances (see
 https://aws.amazon.com/ec2/instance-types/ for details). At this time, these are each a 2-vCPU instances
 with 2 GB of RAM. 
 
 The production site is served from the following URLs:
 
-- https://prod-www.burtoncummingstheatre.ca/
-- https://www.burtoncummingstheatre.ca/
+- https://prod-www.moosehockey.com/
+- https://www.moosehockey.com/
 
 ### Deploying ###
 
 Run the following at the command line to deploy the latest commited code in your local Git repository to
 the production website:
 
-    eb deploy tnse-burtoncummingstheatre-web
+    eb deploy tnse-manitobamoose-web
 
 You may be required to execute **eb init** if this is your first attempt to deploy the website to the 
 Elastic Beanstalk server(s); instructions can be found further down in this document.
 
 ### SSH
 
-In order to SSH/SFTP to the servers for www.burtoncummingstheatre.ca, run the command:
+In order to SSH/SFTP to the servers for www.moosehockey.com, run the command:
 
-    eb ssh tnse-burtoncummingstheatre-web
+    eb ssh tnse-manitobamoose-web
 
 You may be required to execute **eb ssh --setup** if this is your first attempt to
 connect via SSH to the Elastic Beanstalk server(s).
@@ -54,11 +54,11 @@ The production website is configured to connect to the MySQL database:
     Host: tnse-data.cluster-cstl3uviglyz.ca-central-1.rds.amazonaws.com
     Username: root
     Password: 6PxuaQ7a9CKgSWJAoixdSVln4Qam5ddY
-    Database: burtoncummingstheatre
+    Database: manitobamoose
 
 To quickly connect at the command line (as the root/admin user), run:
 
-    mysql -h tnse-data.cluster-cstl3uviglyz.ca-central-1.rds.amazonaws.com -u root -p6PxuaQ7a9CKgSWJAoixdSVln4Qam5ddY -D burtoncummingstheatre
+    mysql -h tnse-data.cluster-cstl3uviglyz.ca-central-1.rds.amazonaws.com -u root -p6PxuaQ7a9CKgSWJAoixdSVln4Qam5ddY -D manitobamoose
 
 ### Logs
 
@@ -81,12 +81,12 @@ For the purposes of this guide, we'll assume that your GitHub username is **yllu
 
 2.  Clone the fork of your repository into a local folder:
 
-        git clone git@github.com:yllus/burtoncummingstheatre_site.git
+        git clone git@github.com:true-north-sports-entertainment/manitobamoose_site.git
 
-3.  Okay, let's get the database up and going! First, you'll need to create a database named "burt" in MySQL using phpMyAdmin,
+3.  Okay, let's get the database up and going! First, you'll need to create a database named "moose" in MySQL using phpMyAdmin,
     MySQLWorkbench or at the command line:
 
-        CREATE DATABASE burt;
+        CREATE DATABASE moose;
 
 4.  Next, you'll need to get a recent copy of the database from a fellow developer. One backup of the database is included with the 
     site files in the wp-content/uploads/ folder as **db_2023-08-01.zip**, and you can unzip it to prep it for import:
@@ -95,7 +95,7 @@ For the purposes of this guide, we'll assume that your GitHub username is **yllu
 
 5.  Next, import the decompressed SQL file into MySQL using a command like the following:
 
-        mysql -u root -proot -D burt < db_2023-08-01.sql
+        mysql -u root -proot -D moose < db_2023-08-01.sql
 
 6.  With that complete, you'll need to now open the following file:
 
@@ -124,7 +124,7 @@ For the purposes of this guide, we'll assume that your GitHub username is **yllu
 10. Let's test to see if the website is up! Navigate to the domain name your local website is set up upon to use the WordPress site. 
    By default, the primary administrator account will have the username/password of:
 
-        URL: http://local-www.burtoncummingstheatre.ca/wp-admin/
+        URL: http://local-www.moosehockey.com/wp-admin/
         Username: tnsedev
         Password: oibaF.rub5!
 
@@ -148,7 +148,7 @@ For the purposes of this guide, we'll assume that your GitHub username is **yllu
 
 		eb init
   
-    Choose the Region of **ca-central-1**, and then the Application **tnse-burtoncummingstheatre-web**. (Note that if you are 
+    Choose the Region of **ca-central-1**, and then the Application **tnse-manitobamoose-web**. (Note that if you are 
     juggling multiple AWS accounts, you may need to run **eb init --profile=tnse** or somehow otherwise indicate the profile 
     to set up properly.) Choose **N** for CodeCommit.
 
