@@ -1,4 +1,4 @@
-# Manitoba Moose (WordPress 6.x)
+# Manitoba Moose (WordPress 6.x) ***NEW***
 
 **Site Environment**
 
