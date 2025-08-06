@@ -1,0 +1,697 @@
+// Common Site Wide Elements - WordPress Theme Custom Styles
+
+// Import Delivery Font
+@font-face {
+    font-family: 'Delivery';
+    src: url('../burt/fonts/Delivery.woff2') format('woff2'),
+         url('../burt/fonts/Delivery.ttf') format('truetype'),
+         url('../burt/fonts/Delivery.woff') format('woff'),
+         url('../burt/fonts/Delivery.svg') format('svg'),
+         url('../burt/fonts/Delivery.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Delivery Regular';
+    src: url('../burt/fonts/Delivery_Rg.woff2') format('woff2'),
+         url('../burt/fonts/Delivery_Rg.ttf') format('truetype'),
+         url('../burt/fonts/Delivery_Rg.woff') format('woff'),
+         url('../burt/fonts/Delivery_Rg.svg') format('svg'),
+         url('../burt/fonts/Delivery_Rg.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Delivery Condensed Black';
+    src: url('../burt/fonts/Delivery_CdBlk.woff2') format('woff2'),
+         url('../burt/fonts/Delivery_CdBlk.ttf') format('truetype'),
+         url('../burt/fonts/Delivery_CdBlk.woff') format('woff'),
+         url('../burt/fonts/Delivery_CdBlk.svg') format('svg'),
+         url('../burt/fonts/Delivery_CdBlk.otf') format('opentype');
+}
+
+
+
+:root {
+    --tec-font-family-sans-serif: 'Open Sans', "Helvetica Neue", 'Arial', sans-serif !important
+}
+
+body {
+    font-size: 18px;
+    line-height: 1.6;
+    font-family: 'Open Sans', "Helvetica Neue", 'Arial', sans-serif !important;
+    color: #333;
+}
+
+.home body{
+    
+}
+
+p {
+    font-size:18px;
+    margin-bottom: 22px;
+    line-height:1.7em
+    /* This is equivalent to 1.6 times the base font size */
+}
+
+a{
+   color:#00A562;
+   text-decoration: none;
+   font-weight:bold
+}
+
+.error404 ul a{
+    font-size: 18px;
+}
+
+ul a {
+    font-weight: 700
+}
+
+a:hover {
+    text-decoration: underline
+}
+
+.navbar{
+    background-color: transparent !important;
+}
+
+.navbar a:hover {
+    text-decoration: none
+}
+
+.wp-block-button.call a:before {
+    content: "\F5C1";
+    font-family: "bootstrap-icons";
+    padding-right: 27px;
+    display: inline-block;
+    width:13px;
+    height:auto;
+    color:#013148;
+    font-size:16px !important;
+    margin-top:4px
+}
+
+.wp-block-button.email a:before {
+    content: "\F7BE";
+    font-family: "bootstrap-icons";
+    padding-right: 28px;
+    display: inline-block;
+    width: 13px;
+    height: auto;
+    color: #013148;
+    font-size: 16px !important;
+    margin-top: 3px
+}
+
+.wp-block-button.form a:before {
+    content: "\F3B9";
+    font-family: "bootstrap-icons";
+    padding-right: 25px;
+    display: inline-block;
+    width: 13px;
+    height: auto;
+    color: #013148;
+    font-size: 16px !important;
+    margin-top: 3px
+}
+
+.wp-block-button.search a:before {
+    content: "\F52A";
+    font-family: "bootstrap-icons";
+    padding-right: 28px;
+    display: inline-block;
+    width: 17px;
+    height: auto;
+    color: #013148;
+    font-size: 15px !important;
+    margin-top: 5px
+}
+
+.evt-bu.calendar.dark a:before, .wp-block-button.calendar a:before{
+    content: "\F214";
+    font-family: "bootstrap-icons";
+    padding-right: 0;
+    margin-right:12px;
+    display: inline-block;
+    width: 17.5px;
+    height: auto;
+    color: #013148;
+    font-size: 16px !important;
+    margin-top:4px
+}
+
+.wp-block-button:hover a:before{
+    color: #ffffff !important
+}
+
+.tribe-events-c-subscribe-dropdown__button-text:before {
+    width:30px
+}
+
+.tribe-events-c-subscribe-dropdown__button-text:before {
+    width: 30px
+}
+
+.evt-bu.call.dark:hover a:before,
+.evt-bu.email.dark:hover a:before,
+.evt-bu.form.dark:hover a:before,
+.evt-bu.calendar.dark:hover a:before{
+    color: #ffffff
+}
+
+h1 {
+    font-size: 3rem;
+    /* 48px */
+    line-height: 1.3;
+    /* Approximately 57.6px */
+    margin-bottom: 27px !important;
+    /* Approximately 57.6px */
+    letter-spacing:-0.03em;
+    text-align: left
+}
+
+h1 i{
+    color:#00A562;
+    font-weight: bold
+}
+
+
+/*@include media-breakpoint-down(lg) {
+    h1 {
+        font-size: 2.75rem
+    }
+}
+
+@include media-breakpoint-down(md){
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem !important
+    }
+}
+
+@include media-breakpoint-down(sm){
+    h1 {
+        font-size: 2rem
+    }
+}*/
+
+.left-cont h1{
+    margin-top:-9px
+}
+
+@include media-breakpoint-down(sm){
+    .left-cont h1 {
+        margin-top: 0
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .left-cont h1 {
+        font-size:2.3rem;
+    }
+}
+
+@include media-breakpoint-down(lg){
+    .left-cont h1 {
+        font-size: 2rem;
+    }
+}
+
+h2 {
+    font-size: 2.5rem;
+    /* 36px */
+    line-height: 1.1;
+    /* Approximately 46.8px */
+    margin-bottom: 27px;
+    /* 36px */
+    font-family: 'Delivery', Arial, Helvetica sans-serif !important;
+    color:#093148;
+}
+
+@include media-breakpoint-down(md) {
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 1.25rem
+    }
+}
+
+h3 {
+    font-size: 1.875rem;
+    /* 30px */
+    line-height: 1.4;
+    /* Approximately 42px */
+    margin-bottom: 1.75rem;
+    /* 30px */
+}
+
+h4 {
+    font-size: 1.5rem;
+    /* 24px */
+    line-height: 1.5;
+    /* Approximately 36px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+}
+
+h5 {
+    font-size: 1.25rem;
+    /* 20px */
+    line-height: 1.5;
+    /* Approximately 30px */
+    margin-bottom: 1.25rem;
+    /* 20px */
+}
+
+h6 {
+    font-size: 1rem;
+    /* 16px */
+    line-height: 1.6;
+    /* Approximately 25.6px */
+    margin-bottom: 1rem;
+    /* 16px */
+}
+
+.content-block-title {
+    scroll-margin-top: 80px; /* Adjust for fixed headers if needed */
+}
+
+.container,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl{
+    max-width:1446px;
+}
+
+@include media-breakpoint-down(md){
+    .tribe-common .tribe-common-g-row--gutters>.tribe-common-g-col {
+        /*padding-right: calc(var(--bs-gutter-x)* .5) !important;
+        padding-left: calc(var(--bs-gutter-x)* .5) !important*/
+    }
+}
+
+/* Custom Breakpoints */
+@media (min-width:768px) and (max-width: 1446px) {
+    .navbar {
+       /* padding-left: 4.5rem !important;
+        padding-right: 4.5rem !important*/
+    }
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    --bs-dropdown-link-active-bg: #00A562 !important
+}
+
+.green{
+    color:#00A562;
+}
+
+.parallax {
+    height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.page-template-page-venue .parallax {
+    height: 500px
+}
+
+@include media-breakpoint-down(lg){
+    .parallax {
+        height: auto;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+}
+
+.p-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1, 49, 72, 0);
+    /* Adjust this if you want a color overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centered-content {
+    display:none;
+    color: white;
+    /* Adjust the text color */
+    text-align: center;
+    padding: 20px;
+    /*background-color: rgba(0, 0, 0, 0.5);*/
+    /* Optional: Background for the content */
+    border-radius: 10px;
+    /* Optional: Rounded corners for the content box */
+    font-family: 'Delivery', Arial, Helvetica sans-serif !important
+}
+
+.centered-content h1{
+    font-size: 100px;
+    line-height: 6rem
+}
+
+.centered-content h1 span{
+    color:#00A562
+}
+
+.bg-image-column{
+    /*background-image: url('//tnse-website-uploads.s3.ca-central-1.amazonaws.com/burtoncummingstheatre/wp-content/uploads/2024/03/18135748/the-burton-cummings-theatre-exchange-district-winnipeg-manitoba-canada-2CB8HXJ-v2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    /* Ensure the column has height */
+    /*min-height: 100vh;
+    margin:4rem 3rem;
+    width:calc(50% - 6rem);
+    /* You can adjust this value to your needs */
+}
+
+.side-img{
+    position: relative;
+}
+
+
+.page-template-page-venue .side-img div{
+    /*background-image:url('//tnse-website-uploads.s3.ca-central-1.amazonaws.com/burtoncummingstheatre/wp-content/uploads/2024/08/21114243/bct-exterior-h1400.jpg');*/
+    height:100%;
+    min-height:1000px;
+    max-height:1200px;
+    background-position: center top;
+    background-size: cover;
+    width:100%;
+}
+
+@include media-breakpoint-down(lg){
+    .page-template-page-venue .side-img div {
+        //height: 100vh;
+    }
+}
+
+/*.page-template-page-venue .side-img div:nth-child(2){
+    background-image: url('//tnse-website-uploads.s3.ca-central-1.amazonaws.com/burtoncummingstheatre/wp-content/uploads/2024/07/30144426/walker-theatre-render.jpg');
+    background-position: bottom;
+}
+
+.page-template-page-venue .side-img div:nth-child(3) {
+    background-image: url('//tnse-website-uploads.s3.ca-central-1.amazonaws.com/burtoncummingstheatre/wp-content/uploads/2024/07/30150415/odeon-burt.jpg');
+}
+
+.page-template-page-venue .side-img div:nth-child(4) {
+    background-image: url('//tnse-website-uploads.s3.ca-central-1.amazonaws.com/burtoncummingstheatre/wp-content/uploads/2024/07/30154255/burt-bct.jpg');
+}
+
+.page-template-page-venue .side-img div:last-child {
+margin-bottom:0;
+}*/
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 48px;
+    /*border:1px solid green;*/
+    /*margin-bottom:-20%;
+    padding-top:10%*/
+    /*margin-bottom:-10%;
+    padding-top:20%;
+    overflow:hidden*/
+}
+
+@include media-breakpoint-down(sm){
+    .gallery {
+        gap:24px;
+    }
+}
+
+@media (min-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(calc((100% - 4 * 48px) / 5), 1fr));
+    }
+}
+
+@media (min-width: 545px) and (max-width:575px) {
+    .gallery a:last-child {
+        display: none;
+    }
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s;
+    border:3px solid #c5a363
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+.gallery-cont{
+    /*border:1px solid red;*/
+    position: relative;
+   /*padding-top:200px*/
+}
+
+/* Prevent scrolling when the Lightbox is open */
+.body-no-scroll {
+    overflow: hidden;
+    height: 100%;
+    /* Ensure the height is constrained to prevent scrolling */
+}
+
+.lightbox .lb-outerContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lb-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    /* Ensures the image fits within the container without being distorted */
+    width: auto;
+    height: auto;
+}
+
+.lb-details{
+    display:none
+}
+
+.page-template-page-venue .left-cont div {
+    padding-bottom: 0
+}
+
+.is-layout-flex> :is(*, div){
+    
+}
+
+.card-header .btn {
+    width: 100%;
+    text-align: left;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+
+.card-header .btn-link {
+    color: #000;
+    text-decoration: none;
+    width: 100%;
+}
+
+.card-header .btn-link:hover {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+.card-header .btn-link .bi {
+    transition: transform 0.3s;
+}
+
+.card-header .btn-link:not(.collapsed) .bi {
+    transform: rotate(180deg);
+    /* Arrow points up when expanded */
+}
+
+.card-header .btn-link.collapsed .bi {
+    transform: rotate(0deg);
+    /* Arrow points down when collapsed */
+}
+
+.card {
+    border-radius: 0 !important;
+}
+
+.card:first-of-type .card-header .btn-link:not(.collapsed) .bi{
+    transform: rotate(0deg);
+}
+
+.card:first-of-type .card-header .btn-link.collapsed .bi {
+    transform: rotate(180deg);
+}
+
+.search time{
+    display:none
+}
+
+.search .media{
+    padding-top:2.5rem;
+    padding-bottom:3rem
+}
+
+.search .media:first-child {
+    padding-top: 0
+}
+
+.search .media-body h3 {
+    margin-bottom: 1.5rem
+}
+
+.search .media{
+    border-bottom:1px solid #dee2e6
+}
+
+.search .media:last-child {
+    border-bottom: 0
+}
+
+@include media-breakpoint-down(lg){
+    .search .media:last-child {
+        border-bottom: 1px solid #dee2e6
+    }
+}
+
+.search .media p:last-child{
+    margin-bottom:0
+}
+
+.search .tribe-events-widget-events-list__events{
+    padding-top:1rem;
+}
+
+.search .tribe-events-widget-events-list__event-title{
+    font-size: var(--tec-font-size-4) !important
+}
+
+.search .tribe-events-widget .tribe-events-widget-events-list__event-date-tag-month{
+    font-size: var(--tec-font-size-2) !important
+}
+
+.tribe-events-widget-events-list__view-more{
+    margin-top:var(--tec-spacer-7) !important
+}
+
+#parallax-h1 {
+    margin: auto;
+    width: 100%;
+    z-index: 999999999999;
+    font-family: 'Delivery', Arial, Helvetica sans-serif;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+#parallax-h1 h1 {
+    color: #ffffff;
+    text-align: center;
+    margin: auto;
+    margin-bottom:0 !important;
+    margin-top:-20px;
+    max-width: 1200px;
+    padding: 0 20px;
+    z-index: 999999;
+    font-size: 5rem
+}
+
+#parallax-h1 h1 span{
+    color: #00A562;
+    background-color:rgba(0,0,0,0.7);
+    padding: 0 20px
+}
+
+@include media-breakpoint-down(lg){
+    .no-buttons .left-cont-inner p:last-child {
+        margin-bottom: 0 !important
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .w-lg-100 {
+        width: 100% !important
+    }
+}
+
+.wp-dark-mode-active .wp-block-freeform.block-library-rich-text__tinymce li,
+.wp-dark-mode-active .wp-block-freeform.block-library-rich-text__tinymce p{
+    color:#ffffff !important
+}
+
+.container-fluid.blocks .row:nth-child(even){
+    background-color:#f5f5f5
+}
+
+.wp-dark-mode-floating-switch{
+    display:none !important
+}
+
+/* Second Featured Image for Events */
+
+.no-image {
+    padding-bottom: 100%;
+    /* Square aspect ratio placeholder */
+}
+
+.image-present {
+    height: auto;
+    /* Remove padding for the image container */
+    padding-bottom: 0;
+    /* Ensure no extra space */
+}
+
+abbr[title]{
+    text-decoration: none !important
+}
+
+/* WP-Admin */
+
+.the-tagcloud ul li a{
+ font-size: 6pt !important
+}
+
+/* Fade-in styles */
+/*.fade-in {
+    opacity: 0;
+    transition: opacity 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}*/
+
+/* Fade-in-transform styles */
+/*.fade-in-transform {
+    opacity: 1;
+    transform: translateY(20px);
+    transition: opacity 0.1s ease-out, transform 0.1s ease-out;
+}
+
+.fade-in-transform.visible {
+    opacity: 1;
+    transform: translateY(0);
+}*/

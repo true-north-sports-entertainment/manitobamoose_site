@@ -1,0 +1,17 @@
+{
+    "require": {
+        "vlucas/phpdotenv": "^5.5",
+        "yoast/wordpress-seo-premium": "^24.8"
+    },
+    "repositories": {
+        "my-yoast": {
+            "type": "composer",
+            "url": "https://my.yoast.com/packages/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    }
+}

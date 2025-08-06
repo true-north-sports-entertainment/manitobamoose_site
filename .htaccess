@@ -1,0 +1,34 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Block Hidden Files
+    RedirectMatch 403 /\..*$
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # 301 Redirects (Placed BEFORE WordPress rules)
+    RewriteRule ^category/uncategorized/?$ / [R=302,L]
+
+    RewriteRule ^venue/the-ticketmaster-lounge/?$ https://www.burtoncummingstheatre.ca/plan-your-visit/frequently-asked-questions/ [R=301,L]
+    RewriteRule ^about-us/?$ https://www.burtoncummingstheatre.ca/the-venue/ [R=301,L]
+    RewriteRule ^the-venue/calendar/?$ https://www.burtoncummingstheatre.ca/events/month/ [R=301,L]
+    RewriteRule ^whatson/?$ https://www.burtoncummingstheatre.ca/events/ [R=301,L]
+    RewriteRule ^event-type/.*$ https://www.burtoncummingstheatre.ca/events/ [R=301,L]
+
+# BEGIN WordPress
+# The directives (lines) between `BEGIN WordPress` and `END WordPress` are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress

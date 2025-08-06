@@ -1,0 +1,274 @@
+// Footer - WordPress Theme Custom Styles
+.footer {
+	background-color:#000000;
+    width:100%;
+    margin:auto
+}
+
+.footer ul{
+    padding:0;
+    list-style:none;
+    display: inline-block
+}
+
+.footer ul li{
+    display: inline-block
+}
+
+.footer ul li:after{
+    content: "\00A0\00A0\00A0|\00A0\00A0";
+    color: #ccc
+}
+
+.footer ul li:last-child:after{
+    content: ""
+}
+
+@include media-breakpoint-down(sm) {
+    .footer ul li {
+        display: block;
+        line-height:1.75em
+
+    }
+
+    .footer ul li:after {
+        content: ""
+    }
+}
+
+.footer ul li a{
+    text-decoration: none;
+    font-family:'Delivery Regular', Arial, Helvetica sans-serif;
+    font-size:16px;
+    color:#ffffff
+}
+
+.copyr div{
+    color:#fff;
+    font-size:12px;
+    font-family:'Delivery Regular', Arial, Helvetica sans-serif
+}
+
+.full-width-row {
+    width: 100%;
+    position: relative;
+    padding:0;
+    margin:0
+}
+
+.company-logo img{
+  width:100px;
+  padding:0 8px
+}
+
+@include media-breakpoint-down(sm){
+    .company-logo{
+        margin:auto
+      }
+}
+
+.footer-menu ul{
+    margin-bottom:0
+}
+
+@include media-breakpoint-down(md){
+    .social-ft{
+        justify-content:inherit !important;
+        padding-top:0 !important;
+        padding-bottom: 0.7rem
+    }
+}
+
+.footer-bar {
+    background-color: #00A562;
+    text-align: center;
+    padding-top:20px;
+    padding-bottom:20px
+}
+
+@include media-breakpoint-down(xl){
+    .footer-bar {
+        padding-top: 2rem;
+        padding-bottom: 2rem
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .footer-bar {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem
+    }
+}
+
+.share-exp {
+    height: auto;
+    margin: auto;
+    font-family: 'Delivery Light', Arial, Helvetica sans-serif;
+    color: #ffffff;
+    font-size: 34px;
+    line-height:1.1em
+}
+
+/*#sep {
+    font-size: 34px;
+    color: #ffffff;
+    margin-top:1px
+}*/
+
+.footer-bar div span {
+    font-family: 'Delivery Condensed Black', Arial, Helvetica sans-serif !important;
+    letter-spacing: 0.02em;
+    padding-left:20px
+}
+
+.footer-bar #share-icons {
+    margin:auto;
+    height:42px
+}
+
+@include media-breakpoint-down(md){
+    .footer-bar #share-icons{
+        margin-bottom:10px
+    }
+}
+
+@include media-breakpoint-up(md){
+    .footer-bar #share-icons {
+        height:31px !important
+    }
+}
+
+.footer-bar #share-icons a{
+    padding-right:10px
+}
+
+.footer-bar #share-icons a:last-child {
+    padding-right: 0
+}
+
+@media only screen and (min-width:1200px) and (max-width:1330px){
+    /*.footer-bar #share-icons {
+        display:none !important
+    }*/
+    .share-exp{
+        font-size:28px
+    }
+}
+
+@media only screen and (max-width:1199px) {
+    .share-exp {
+        font-size: 46px !important
+    }
+}
+
+@media only screen and (max-width:768px){
+    .share-exp {
+        font-size: 36px !important
+    }
+}
+
+@media only screen and (max-width:576px) {
+    .share-exp {
+        font-size: 30px !important;
+        padding-left:1rem;
+        padding-right:1rem
+    }
+
+    .share-exp span {
+        font-size: 30px !important
+    }
+
+    .footer-bar .evt-bu, .footer-bar .evt-bu a{
+        width:100%
+    }
+
+    .ftr-evt-bu{
+        padding-left:0;
+        padding-right:0
+    }
+
+    .footer-bar #share-icons{
+        /*padding-bottom:18px*/
+    }
+}
+
+@media only screen and (max-width:456px) {
+    #share-icons{
+        padding-top:5px;
+        margin-bottom:10px
+    }
+}
+
+@media only screen and (max-width:350px) {
+    .share-exp span {
+        font-size: 20px !important
+    }
+}
+
+.footer-bar .evt-bu a {
+    border: 3px solid #ffffff !important;
+    font-size: 20px !important;
+    line-height: 31px
+}
+
+@include media-breakpoint-up(xl){
+    .footer-bar .evt-bu a {
+        font-size: 16px !important
+    }
+
+    .footer-bar .evt-bu a:before{
+        display:none
+    }
+}
+
+@media only screen and (min-width:1290px) {
+    .footer-bar .evt-bu a:before {
+        display: inline-block
+    }
+}
+
+@media only screen and (min-width:1350px) {
+    .footer-bar .evt-bu a {
+        font-size: 18px !important
+    }
+}
+
+@media only screen and (min-width:1430px){
+    .footer-bar .evt-bu a {
+        font-size: 20px !important
+    }
+} 
+
+.footer-bar .evt-bu a:before {
+    top: 0.047em;
+    content:"\F1E8";
+    font-size:17px
+}
+
+.footer-bar .evt-bu:hover a:before {
+    color: #00A562
+}
+
+.footer-bar .evt-bu a:hover {
+    background-color: #ffffff !important;
+    color: #00A562
+}
+
+.ftr-insta img{
+    height:29px;
+    vertical-align:top
+}
+
+.ftr-fb img{
+    height:29px;
+    vertical-align: top
+}
+
+.ftr-x img{
+    height:27px;
+    vertical-align: top
+}
+
+.ftr-x{
+    /*margin-left:-4px*/
+}

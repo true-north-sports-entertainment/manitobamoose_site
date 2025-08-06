@@ -1,0 +1,28 @@
+/*!
+Theme Name: 	Burton Cummings Theatre
+Theme URI: 		https://github.com/true-north-sports-entertainment/burtoncummingstheatre_site
+Description: 	A Bootstrap 5-based theme for the Burton Cummings Theatre website.
+Version: 		1.0.0
+Author: 		True North Sports + Entertainment
+Author URI: 	https://github.com/true-north-sports-entertainment
+Tags: 			bootstrap, burton cummings theatre
+*/
+
+// Bootstrap (Layout, Content, Components and Utilities: https://getbootstrap.com/docs/5.3/getting-started/contents/ )
+
+$grid-gutter-width: 3rem; // Set default gutter width to 48px
+
+@import 'scss/bootstrap/bootstrap';
+@import 'scss/bootstrap/bootstrap-icons';
+
+// WordPress Theme Custom Styles
+@import 'scss/common';
+@import 'scss/footer';
+@import 'scss/header';
+@import 'scss/index';
+@import 'scss/page-venue';
+@import 'scss/page-home';
+@import 'scss/page';
+@import 'scss/single';
+@import 'scss/event';
+@import 'scss/seating-map';

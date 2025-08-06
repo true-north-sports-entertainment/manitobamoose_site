@@ -1,0 +1,13 @@
+.DS_Store
+.env
+.env-sample
+package-lock.json
+*.sql
+node_modules/
+wp-content/updraft/*.txt
+wp-content/uploads/
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
