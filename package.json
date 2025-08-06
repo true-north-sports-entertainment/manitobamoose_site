@@ -1,26 +1,28 @@
 {
-  "name": "burtoncummingstheatre_site",
+  "name": "manitobamoose_site",
   "version": "1.0.0",
   "description": "**Site Environment**",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node-sass --include-path wp-content/themes/burt/scss wp-content/themes/burt/style.scss wp-content/themes/burt/style.css",
-    "watch": "node-sass --watch --include-path wp-content/themes/burt/scss wp-content/themes/burt/style.scss wp-content/themes/burt/style.css",
-    "production": "node-sass --output-style compressed --include-path wp-content/themes/burt/scss wp-content/themes/burt/style.scss wp-content/themes/burt/style.css"
+  "build": "sass wp-content/themes/manitobamoose/scss:wp-content/themes/manitobamoose",
+  "watch": "sass --watch wp-content/themes/manitobamoose/scss:wp-content/themes/manitobamoose",
+  "production": "sass --style=compressed wp-content/themes/manitobamoose/scss:wp-content/themes/manitobamoose"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/true-north-sports-entertainment/burtoncummingstheatre_site.git"
+    "url": "git+https://github.com/true-north-sports-entertainment/manitobamoose_site.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/true-north-sports-entertainment/burtoncummingstheatre_site/issues"
+    "url": "https://github.com/true-north-sports-entertainment/manitobamoose_site/issues"
   },
-  "homepage": "https://github.com/true-north-sports-entertainment/burtoncummingstheatre_site#readme",
+  "homepage": "https://github.com/true-north-sports-entertainment/manitobamoose_site#readme",
   "dependencies": {
-    "bootstrap-icons": "^1.11.3",
-    "node-sass": "^9.0.0"
+    "bootstrap-icons": "^1.11.3"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "sass": "^1.90.0"
   }
 }

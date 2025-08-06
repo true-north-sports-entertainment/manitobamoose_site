@@ -1,0 +1,397 @@
+// Common Site Wide Elements - WordPress Theme Custom Styles
+
+:root {
+    --tec-font-family-sans-serif: 'Open Sans', "Helvetica Neue", 'Arial', sans-serif !important
+}
+
+body {
+    font-size: 18px;
+    line-height: 1.6;
+    font-family: 'Open Sans', "Helvetica Neue", 'Arial', sans-serif !important;
+    color: #333;
+}
+
+p {
+    font-size:18px;
+    margin-bottom: 22px;
+    line-height:1.7em
+}
+    /* This is equivalent to 1.6 times the base font size */
+
+a{
+   color:#00A562;
+   text-decoration: none;
+   font-weight:bold
+}
+
+.error404 ul a{
+    font-size: 18px;
+}
+
+ul a {
+    font-weight: 700
+}
+
+a:hover {
+    text-decoration: underline
+}
+
+.navbar{
+    background-color: transparent !important;
+}
+
+.navbar a:hover {
+    text-decoration: none
+}
+
+h1 {
+    font-size: 3rem;
+    /* 48px */
+    line-height: 1.3;
+    /* Approximately 57.6px */
+    margin-bottom: 27px !important;
+    /* Approximately 57.6px */
+    letter-spacing:-0.03em;
+    text-align: left
+}
+
+h1 i{
+    color:#00A562;
+    font-weight: bold
+}
+
+@include media-breakpoint-down(md){
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem !important
+    }
+}
+
+@include media-breakpoint-down(sm){
+    h1 {
+        font-size: 2rem
+    }
+}
+
+h2 {
+    font-size: 2.5rem;
+    /* 36px */
+    line-height: 1.1;
+    /* Approximately 46.8px */
+    margin-bottom: 27px;
+    /* 36px */
+    //font-family: 'Delivery', Arial, Helvetica sans-serif !important;
+    color:#093148;
+}
+
+@include media-breakpoint-down(md) {
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 1.25rem
+    }
+}
+
+h3 {
+    font-size: 1.875rem;
+    /* 30px */
+    line-height: 1.4;
+    /* Approximately 42px */
+    margin-bottom: 1.75rem;
+    /* 30px */
+}
+
+h4 {
+    font-size: 1.5rem;
+    /* 24px */
+    line-height: 1.5;
+    /* Approximately 36px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+}
+
+h5 {
+    font-size: 1.25rem;
+    /* 20px */
+    line-height: 1.5;
+    /* Approximately 30px */
+    margin-bottom: 1.25rem;
+    /* 20px */
+}
+
+h6 {
+    font-size: 1rem;
+    /* 16px */
+    line-height: 1.6;
+    /* Approximately 25.6px */
+    margin-bottom: 1rem;
+    /* 16px */
+}
+
+.container,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl{
+    max-width:1446px;
+}
+
+/* Custom Breakpoints */
+@media (min-width:768px) and (max-width: 1446px) {
+    .navbar {
+       /* padding-left: 4.5rem !important;
+        padding-right: 4.5rem !important*/
+    }
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    --bs-dropdown-link-active-bg: #00A562 !important
+}
+
+.green{
+    color:#00A562;
+}
+
+.parallax {
+    height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+@include media-breakpoint-down(lg){
+    .parallax {
+        height: auto;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+}
+
+.p-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1, 49, 72, 0);
+    /* Adjust this if you want a color overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centered-content {
+    display:none;
+    color: white;
+    /* Adjust the text color */
+    text-align: center;
+    padding: 20px;
+    /*background-color: rgba(0, 0, 0, 0.5);*/
+    /* Optional: Background for the content */
+    border-radius: 10px;
+    /* Optional: Rounded corners for the content box */
+    //font-family: 'Delivery', Arial, Helvetica sans-serif !important
+}
+
+.centered-content h1{
+    font-size: 100px;
+    line-height: 6rem
+}
+
+.centered-content h1 span{
+    color:#00A562
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 48px;
+}
+
+@include media-breakpoint-down(sm){
+    .gallery {
+        gap:24px;
+    }
+}
+
+@media (min-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(calc((100% - 4 * 48px) / 5), 1fr));
+    }
+}
+
+@media (min-width: 545px) and (max-width:575px) {
+    .gallery a:last-child {
+        display: none;
+    }
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s;
+    border:3px solid #c5a363
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+.gallery-cont{
+    position: relative;
+}
+
+/* Prevent scrolling when the Lightbox is open */
+.body-no-scroll {
+    overflow: hidden;
+    height: 100%;
+    /* Ensure the height is constrained to prevent scrolling */
+}
+
+.lightbox .lb-outerContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lb-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    /* Ensures the image fits within the container without being distorted */
+    width: auto;
+    height: auto;
+}
+
+.lb-details{
+    display:none
+}
+
+.card-header .btn {
+    width: 100%;
+    text-align: left;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+
+.card-header .btn-link {
+    color: #000;
+    text-decoration: none;
+    width: 100%;
+}
+
+.card-header .btn-link:hover {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+.card-header .btn-link .bi {
+    transition: transform 0.3s;
+}
+
+.card-header .btn-link:not(.collapsed) .bi {
+    transform: rotate(180deg);
+    /* Arrow points up when expanded */
+}
+
+.card-header .btn-link.collapsed .bi {
+    transform: rotate(0deg);
+    /* Arrow points down when collapsed */
+}
+
+.card {
+    border-radius: 0 !important;
+}
+
+.card:first-of-type .card-header .btn-link:not(.collapsed) .bi{
+    transform: rotate(0deg);
+}
+
+.card:first-of-type .card-header .btn-link.collapsed .bi {
+    transform: rotate(180deg);
+}
+
+.search time{
+    display:none
+}
+
+.search .media{
+    padding-top:2.5rem;
+    padding-bottom:3rem
+}
+
+.search .media:first-child {
+    padding-top: 0
+}
+
+.search .media-body h3 {
+    margin-bottom: 1.5rem
+}
+
+.search .media{
+    border-bottom:1px solid #dee2e6
+}
+
+.search .media:last-child {
+    border-bottom: 0
+}
+
+@include media-breakpoint-down(lg){
+    .search .media:last-child {
+        border-bottom: 1px solid #dee2e6
+    }
+}
+
+.search .media p:last-child{
+    margin-bottom:0
+}
+
+#parallax-h1 {
+    margin: auto;
+    width: 100%;
+    z-index: 999999999999;
+    font-family: 'Delivery', Arial, Helvetica sans-serif;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+#parallax-h1 h1 {
+    color: #ffffff;
+    text-align: center;
+    margin: auto;
+    margin-bottom:0 !important;
+    margin-top:-20px;
+    max-width: 1200px;
+    padding: 0 20px;
+    z-index: 999999;
+    font-size: 5rem
+}
+
+#parallax-h1 h1 span{
+    color: #00A562;
+    background-color:rgba(0,0,0,0.7);
+    padding: 0 20px
+}
+
+@include media-breakpoint-down(lg){
+    .no-buttons .left-cont-inner p:last-child {
+        margin-bottom: 0 !important
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .w-lg-100 {
+        width: 100% !important
+    }
+}
